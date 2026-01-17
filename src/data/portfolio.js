@@ -1,8 +1,12 @@
 export const heroData = {
-  name: "Jesús",
+  name: "Jesús Burgos",
   role: "Backend Developer & AI Enthusiast",
-  subheading: "Especializado en Python y arquitecturas escalables. Transformo problemas complejos en lógica de negocio eficiente.",
-  about: "Soy un desarrollador apasionado por lo que ocurre 'detrás de cámaras'. Después de profundizar durante el último año en arquitecturas modernas y modelos de Inteligencia Artificial, he vuelto para construir software que no solo funcione, sino que sea robusto y escalable. Me muevo cómodamente entre la lógica de servidores y el entrenamiento de modelos."
+  description: "Desarrollador Backend enfocado en Python. Disfruto construyendo la lógica detrás de las aplicaciones y explorando cómo integrar Inteligencia Artificial en soluciones funcionales. Mi enfoque está en el código que no se ve pero hace que todo funcione. Tras un periodo de profundización en arquitecturas modernas, construyo software robusto entendiendo el 'cómo' y el 'por qué' de las cosas.",
+  socialLinks: {
+    github: "https://github.com/TU_USUARIO",
+    linkedin: "https://linkedin.com/in/TU_USUARIO",
+    email: "mailto:tu@email.com"
+  }
 };
 
 export const projectsData = [
@@ -72,22 +76,34 @@ export const projectsData = [
 // NUEVA SECCIÓN: Lo que puedo hacer por ti
 export const servicesData = [
   {
-    title: "Backend Architecture",
-    desc: "Diseño sistemas robustos desde cero, priorizando la seguridad, la velocidad y la escalabilidad de la base de datos.",
+    title: "Desarrollo Backend",
+    desc: "Estructuro el lado del servidor utilizando Python (FastAPI/Flask) y gestiono bases de datos PostgreSQL, asegurando que la información se procese y guarde de forma ordenada y eficiente.",
     icon: "server"
   },
   {
-    title: "AI & Model Integration",
-    desc: "No solo entreno modelos; los integro en aplicaciones reales para que aporten valor al negocio inmediatamente.",
+    title: "Integración de IA",
+    desc: "Experiencia entrenando modelos básicos (Visión/NLP) y, lo más importante, exponiéndolos mediante código para que dejen de ser un script y pasen a ser parte de una aplicación útil.",
     icon: "brain"
   },
   {
-    title: "API Development",
-    desc: "Creo APIs RESTful y GraphQL documentadas y fáciles de consumir para equipos Frontend.",
+    title: "Desarrollo de APIs & Integración",
+    desc: "Construyo el puente entre los datos y el usuario. Diseño APIs RESTful eficientes y bien documentadas, facilitando una integración fluida con el Frontend u otros servicios externos.",
     icon: "code"
   }
 ];
 
 export const skillsData = [
   "Python", "PostgreSQL", "FastAPI", "React", "Docker", "TensorFlow", "Git", "Linux"
+];
+
+// STACK CON LOGOS (URLs de Devicon)
+export const stackWithLogos = [
+  { name: "Python", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "FastAPI", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+  { name: "PostgreSQL", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "Docker", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "TensorFlow", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+  { name: "React", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Git", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Linux", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
 ];
