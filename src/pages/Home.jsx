@@ -53,7 +53,7 @@ const Home = () => {
           {/* TECH STACK LOGOS */}
           <div>
             <h3 className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-6">Tecnologías principales</h3>
-            <div className="flex flex-wrap gap-8 items-center grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="flex flex-wrap gap-8 items-center transition-all duration-500">
               {stackWithLogos.map((tech) => (
                 <div key={tech.name} className="group relative flex flex-col items-center gap-2">
                   <img src={tech.url} alt={tech.name} className="h-10 w-10 md:h-12 md:w-12 opacity-60 group-hover:opacity-100 transition-opacity" />

@@ -57,14 +57,7 @@ const ProjectDetail = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             {project.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm font-mono text-blue-400 mb-4">
-            <span>{project.year}</span>
-            <span>—</span>
-            <span>{project.company}</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            {project.title}
-          </h1>
+          
           <p className="text-xl text-slate-400 leading-relaxed max-w-2xl">
             {project.details.solution}
           </p>

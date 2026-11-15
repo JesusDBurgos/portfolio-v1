@@ -3,9 +3,9 @@ export const heroData = {
   role: "Backend Developer & AI Enthusiast",
   description: "Desarrollador Backend enfocado en Python. Disfruto construyendo la lógica detrás de las aplicaciones y explorando cómo integrar Inteligencia Artificial en soluciones funcionales. Mi enfoque está en el código que no se ve pero hace que todo funcione. Tras un periodo de profundización en arquitecturas modernas, construyo software robusto entendiendo el 'cómo' y el 'por qué' de las cosas.",
   socialLinks: {
-    github: "https://github.com/TU_USUARIO",
-    linkedin: "https://linkedin.com/in/TU_USUARIO",
-    email: "mailto:tu@email.com"
+    github: "https://github.com/JesusDBurgos",
+    linkedin: "https://linkedin.com/in/jesus-burgos",
+    email: "mailto:jesusdburgost@gmail.com"
   }
 };
 
@@ -13,64 +13,56 @@ export const projectsData = [
   {
     id: "chatbot-unab",
     title: "Asistente Virtual Académico",
-    shortDescription: "Chatbot inteligente para automatizar la orientación en Ing. Mecatrónica.",
-    // Usamos una imagen abstracta de tecnología por ahora
+    shortDescription: "Orientador vocacional con chatbot y detección facial, desarrollado en equipo en la UNAB.",
+    description: "Orientador vocacional desarrollado en la UNAB en un equipo de dos personas: una plataforma web con chatbot conversacional y detección facial. Mi aporte fue el chatbot y el módulo de visión.",
     imageUrl: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2000&auto=format&fit=crop",
     year: "2023",
     company: "UNAB",
-    stack: ["Python", "Dialogflow", "React", "PostgreSQL"],
+    innovations: [
+      "Chatbot conversacional con Rasa que orienta al usuario en lenguaje natural.",
+      "Módulo de detección facial con OpenCV integrado a la plataforma.",
+      "API REST con Django REST Framework y frontend en React.",
+      "Servicios orquestados con Docker Compose; trabajo colaborativo en GitHub."
+    ],
+    stack: ["Python", "Django REST", "Rasa", "OpenCV", "React", "Docker"],
     details: {
-      problem: "La facultad recibía cientos de correos repetitivos sobre mallas curriculares y requisitos.",
-      solution: "Sistema conversacional capaz de interpretar lenguaje natural y consultar requisitos académicos en tiempo real.",
+      problem: "Los aspirantes y estudiantes necesitan orientación vocacional accesible, sin depender de una cita presencial.",
+      solution: "Plataforma web con un asistente conversacional (Rasa) y detección facial (OpenCV), conectada a una API REST.",
       challenges: [
-        "Diseñar un flujo de diálogo que manejara interrupciones.",
-        "Integrar la API de la universidad (Legacy).",
-        "Reducir la latencia de respuesta a menos de 200ms."
+        "Integrar chatbot, visión por computador, API y frontend como servicios separados con Docker Compose.",
+        "Coordinar el desarrollo entre dos personas sobre un mismo repositorio."
       ],
-      outcome: "Reducción del 40% en consultas presenciales."
+      outcome: "Proyecto académico completo, de la API a la interfaz, desarrollado en pareja durante 2023."
     },
-    links: { repo: "https://github.com/...", demo: null }
+    links: { repo: "https://github.com/Ivandjt226/Z_Django", demo: null }
   },
   {
     id: "retinopatia-ia",
     title: "Diagnóstico de Retinopatía",
-    shortDescription: "Sistema de visión por computador para detectar lesiones en retinas.",
+    shortDescription: "Prototipo de apoyo al análisis de imágenes de fondo de ojo.",
+    description: "Prototipo de apoyo al análisis de imágenes de fondo de ojo: clasifica, detecta y segmenta lesiones retinianas.",
     imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2000&auto=format&fit=crop",
     year: "2024",
-    company: "Personal",
-    stack: ["Python", "TensorFlow", "OpenCV", "FastAPI"],
+    company: "UNAB",
+    innovations: [
+      "Clasificación con InceptionV3 (transfer learning) y módulos de atención CBAM.",
+      "Detección con YOLO de microaneurismas, hemorragias, exudados duros y blandos, y disco óptico.",
+      "Segmentación con SAM 2.1 guiada por las detecciones, con máscaras por color sobre la imagen.",
+      "Preprocesamiento: recorte del fondo de ojo, CLAHE en espacio LAB y sustracción de fondo.",
+      "API FastAPI dockerizada y frontend en React."
+    ],
+    stack: ["Python", "TensorFlow", "PyTorch", "YOLO", "SAM 2", "OpenCV", "FastAPI", "React", "Docker"],
     details: {
-      problem: "El diagnóstico temprano requiere expertos no siempre disponibles.",
-      solution: "Pipeline de Deep Learning que pre-procesa imágenes y detecta anomalías.",
+      problem: "El diagnóstico temprano requiere especialistas que no siempre están disponibles.",
+      solution: "Pipeline que preprocesa la imagen, clasifica, detecta lesiones y devuelve una segmentación visual.",
       challenges: [
-        "Normalizar imágenes con diferentes condiciones de luz.",
-        "Evitar overfitting con dataset limitado.",
-        "Exponer el modelo pesado vía API ligera."
+        "Normalizar imágenes con diferentes condiciones de iluminación.",
+        "Combinar varios modelos pesados (clasificador, detector y segmentador) detrás de una API."
       ],
-      outcome: "Modelo con 92% de precisión en segmentación."
+      outcome: "Prototipo end-to-end: del envío de la imagen en el navegador al resultado visual con lesiones marcadas."
     },
-    links: { repo: "https://github.com/...", demo: null }
+    links: { repo: "https://github.com/JesusDBurgos/RD_API", demo: null }
   },
-  {
-    id: "model-serving-api",
-    title: "ML Model Serving API",
-    shortDescription: "Infraestructura Backend para desplegar modelos de IA en producción.",
-    imageUrl: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=2000&auto=format&fit=crop",
-    year: "2024",
-    company: "Open Source",
-    stack: ["FastAPI", "Docker", "Redis", "Celery"],
-    details: {
-      problem: "Los modelos en notebooks no son utilizables en apps reales.",
-      solution: "Arquitectura de microservicios para inferencia asíncrona.",
-      challenges: [
-        "Manejar picos de tráfico.",
-        "Gestión de versiones de modelos.",
-        "Validación estricta de datos."
-      ],
-      outcome: "API capaz de servir 100+ peticiones concurrentes."
-    },
-    links: { repo: "https://github.com/...", demo: null }
-  }
 ];
 
 // NUEVA SECCIÓN: Lo que puedo hacer por ti
