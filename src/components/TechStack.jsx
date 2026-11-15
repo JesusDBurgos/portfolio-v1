@@ -1,3 +1,5 @@
+import SectionHeading from "./SectionHeading";
+
 /**
  * TechStack con logos.
  * Uso:  <TechStack stack={stackWithLogos} />
@@ -11,9 +13,7 @@ const TechStack = ({ stack = [] }) => {
 
   return (
     <div>
-      <h3 className="mb-10 text-sm font-bold uppercase tracking-wider text-slate-600">
-        Tecnologías principales
-      </h3>
+      <SectionHeading index="01">Tecnologías principales</SectionHeading>
 
       <ul className="flex flex-wrap items-center gap-x-6 gap-y-10 md:gap-x-8">
         {stack.map((tech) => (
@@ -25,7 +25,7 @@ const TechStack = ({ stack = [] }) => {
               <img
                 src={tech.url}
                 alt={tech.name}
-                className="h-10 w-10 transition duration-300 motion-reduce:transition-none md:h-12 md:w-12"
+                className="h-10 w-10 transition duration-300 group-hover:scale-110 group-focus-visible:scale-110 motion-reduce:transition-none md:h-12 md:w-12"
               />
 
               {/* Caja de detección (decorativa; el nombre ya está en el alt) */}

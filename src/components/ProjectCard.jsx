@@ -29,7 +29,7 @@ const ProjectCard = ({ project, reverse = false }) => {
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400";
 
   return (
-    <article className="group mb-20 grid grid-cols-1 items-center md:mb-28 md:grid-cols-12">
+    <article className="group grid grid-cols-1 items-center md:grid-cols-12">
       {/* Imagen */}
       <div
         className={`relative aspect-[16/10] overflow-hidden rounded-3xl bg-white/5 md:row-start-1 ${

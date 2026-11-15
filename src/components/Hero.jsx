@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+import Reveal from "./Reveal";
 
 /**
  * Edita SOLO este objeto para cambiar el contenido del home.
@@ -11,16 +12,12 @@ const profile = {
   role: "Software con visión por computador y lenguaje natural.",
   intro:
     "Desarrollo APIs, chatbots y sistemas de análisis de imágenes. Abajo están los proyectos en los que he trabajado.",
-  // Colores tomados de las clases de lesiones de RD_API (amarillo, verde, azul, rosa, morado)
   focus: [
-    { label: "Visión por computador", color: "bg-emerald-400" },
-    { label: "Chatbots", color: "bg-pink-300" },
+    { label: "Desarrollo Backend", color: "bg-emerald-400" },
+    { label: "IA Aplicada", color: "bg-pink-300" },
     { label: "APIs REST", color: "bg-sky-400" },
     { label: "Frontend", color: "bg-yellow-300" },
   ],
-  github: "https://github.com/JesusDBurgos",
-  linkedin: "https://www.linkedin.com/in/jesus-burgos/",
-  email: "jesusdburgos@gmail.com", 
   projectsId: "projects", // id de la sección de proyectos
 };
 
@@ -59,60 +56,41 @@ const Hero = () => {
           </h1>
         </div>
 
-        <p className="mt-10 max-w-2xl text-2xl font-medium leading-snug text-slate-200 md:text-3xl">
-          {profile.role}
-        </p>
-        <p className="mt-4 max-w-xl text-lg leading-relaxed text-slate-400">
-          {profile.intro}
-        </p>
+        <Reveal delay={100}>
+          <p className="mt-10 max-w-2xl text-2xl font-medium leading-snug text-slate-200 md:text-3xl">
+            {profile.role}
+          </p>
+        </Reveal>
+        <Reveal delay={180}>
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-slate-400">
+            {profile.intro}
+          </p>
+        </Reveal>
 
-        {/* Áreas de trabajo, con los colores de las clases detectadas */}
-        <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-          {profile.focus.map((item) => (
-            <li
-              key={item.label}
-              className="flex items-center gap-2 text-sm text-slate-300"
-            >
-              <span className={`h-2.5 w-2.5 rounded-sm ${item.color}`} />
-              {item.label}
-            </li>
-          ))}
-        </ul>
+        <Reveal delay={260}>
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+            {profile.focus.map((item) => (
+              <li
+                key={item.label}
+                className="flex items-center gap-2 text-sm text-slate-300"
+              >
+                <span className={`h-2.5 w-2.5 rounded-sm ${item.color}`} />
+                {item.label}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
 
-        <div className="mt-10 flex flex-wrap items-center gap-3">
-          <a
-            href={`#${profile.projectsId}`}
-            className={`inline-flex items-center gap-2 rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-400 ${focusRing}`}
-          >
-            Ver proyectos <ArrowDown size={16} />
-          </a>
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-slate-200 ring-1 ring-white/15 transition-colors hover:bg-white/5 ${focusRing}`}
-          >
-            <Github size={16} /> GitHub
-          </a>
-          {profile.linkedin && (
+        <Reveal delay={340}>
+          <div className="mt-10 flex flex-wrap items-center gap-3">
             <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-slate-200 ring-1 ring-white/15 transition-colors hover:bg-white/5 ${focusRing}`}
+              href={`#${profile.projectsId}`}
+              className={`inline-flex items-center gap-2 rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-400 ${focusRing}`}
             >
-              <Linkedin size={16} /> LinkedIn
+              Ver proyectos <ArrowDown size={16} />
             </a>
-          )}
-          {profile.email && (
-            <a
-              href={`mailto:${profile.email}`}
-              className={`inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium text-slate-400 transition-colors hover:text-slate-100 ${focusRing}`}
-            >
-              <Mail size={16} /> Escríbeme
-            </a>
-          )}
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

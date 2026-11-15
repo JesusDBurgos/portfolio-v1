@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Github } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 /**
  * Edita SOLO esto para cambiar la navegación.
@@ -8,6 +8,8 @@ import { Github } from "lucide-react";
  */
 const name = "Jesús Burgos";
 const github = "https://github.com/JesusDBurgos";
+const linkedin = "https://www.linkedin.com/in/jesus-burgos/";
+const email = "jesusdburgos@gmail.com";
 const links = [
     { label: "Tecnologías", id: "tecnologias" },
     { label: "Proyectos", id: "projects" },
@@ -142,6 +144,28 @@ const FloatingNav = () => {
             );
           })}
         </ul>
+
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          title="LinkedIn"
+          className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-slate-400 transition-colors hover:text-white md:px-4 ${focusRing}`}
+        >
+          <Linkedin size={16} />
+          <span className="sr-only sm:not-sr-only">LinkedIn</span>
+        </a>
+
+        <a
+          href={`mailto:${email}`}
+          aria-label="Escríbeme"
+          title="Escríbeme"
+          className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-slate-400 transition-colors hover:text-white md:px-4 ${focusRing}`}
+        >
+          <Mail size={16} />
+          <span className="sr-only sm:not-sr-only">Escríbeme</span>
+        </a>
 
         <a
           href={github}
